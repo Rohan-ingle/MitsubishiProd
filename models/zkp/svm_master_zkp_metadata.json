@@ -1,0 +1,12 @@
+{
+  "num_features": 30,
+  "weights_shape": [
+    1,
+    30
+  ],
+  "bias_shape": [
+    1
+  ],
+  "weights_commitment": "4993423372985808796",
+  "bias_commitment": "-2272565596138396464"
+}

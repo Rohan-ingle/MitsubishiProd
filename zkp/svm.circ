@@ -1,0 +1,24 @@
+template SVM(n) {
+    signal input w[n];
+    signal input b;
+    signal input x[n];
+    signal output y;
+
+    // Calculate products first
+    signal products[n];
+    for (var i = 0; i < n; i++) {
+        products[i] <== w[i] * x[i];
+    }
+    
+    // Create sum tree for products
+    signal sums[n+1];
+    sums[0] <== 0;
+    for (var i = 0; i < n; i++) {
+        sums[i+1] <== sums[i] + products[i];
+    }
+    
+    // Final sum + bias
+    y <== sums[n] + b;
+}
+
+component main = SVM(30); // 30 = number of features, adjust as needed
