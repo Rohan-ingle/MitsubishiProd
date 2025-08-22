@@ -1,5 +1,13 @@
 # Fraud Detection System with Zero Knowledge Proofs
 
+## Real-Time Financial Fraud Detection System
+
+Financial fraud is a growing concern, especially with the rise of digital payments and online banking. This system was developed to detect and flag suspicious transactions in real-time. The system:
+
+- Learns from historical transaction data
+- Identifies anomalies and patterns
+- Alerts users and institutions instantly
+
 This project implements a secure fraud detection system using machine learning with zero-knowledge proofs (ZKP). The system allows for privacy-preserving fraud classification by using Support Vector Machine (SVM) models wrapped in ZKP circuits.
 
 ## Prerequisites
