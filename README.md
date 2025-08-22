@@ -110,7 +110,3 @@ The system uses SVM (Support Vector Machine) for classification, wrapped in a Ci
 3. Generates a proof that the computation was done correctly without revealing the input data
 
 This allows verification that a sample was correctly classified without revealing the actual sample data.
-
----
-
-**Note:** If you see your workspace associated with an unexpected GitHub repository, check for nested `.git` folders (e.g., in `qaptools_build/`). Your main project is not a git repository unless you initialize it at the root.
