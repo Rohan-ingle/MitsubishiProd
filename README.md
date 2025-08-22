@@ -10,6 +10,13 @@ Financial fraud is a growing concern, especially with the rise of digital paymen
 
 This project implements a secure fraud detection system using machine learning with zero-knowledge proofs (ZKP). The system allows for privacy-preserving fraud classification by using Support Vector Machine (SVM) models wrapped in ZKP circuits.
 
+## UI
+![UI](image.png)
+
+![UI](image-1.png)
+
+![UI](image-2.png)
+
 ## Prerequisites
 
 - Python 3.8+
