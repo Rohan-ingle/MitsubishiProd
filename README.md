@@ -1,4 +1,4 @@
-# Fraud Detection System with Zero Knowledge Proofs
+# USECASE 2: Fraud Detection System with Zero Knowledge Proofs
 
 ## Real-Time Financial Fraud Detection System
 
