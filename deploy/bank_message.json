@@ -1,7 +1,7 @@
 {
-  "sample_id": 19,
-  "prediction": 0,
+  "sample_id": 1,
+  "prediction": 1,
   "true_label": 0,
-  "proof_path": "D:\\Projects\\MitsubishiProd\\models\\zkl\\prediction_0.json",
+  "proof_path": "D:\\Projects\\MitsubishiProd\\models\\zkl\\prediction_1.json",
   "zkp_status": "Success - Using pure zkpy implementation"
 }

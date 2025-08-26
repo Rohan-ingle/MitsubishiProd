@@ -1,7 +1,7 @@
 {
   "prediction": 1,
   "prediction_value": 591.1364727219739,
-  "witness_hash": 1605989838234564580,
-  "circuit_hash": 1677625485832929514,
-  "timestamp": "2025-08-21T15:44:21"
+  "witness_hash": "b326b8375d384e4a06706ebd27482151a0532e78b988276e6348a0ac4cfee597",
+  "circuit_hash": "ac9752171c969b867e6eb1708753c793e04d6abee8087a427bea27a96083b196",
+  "timestamp": "2025-08-26T02:42:57"
 }

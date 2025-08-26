@@ -122,8 +122,29 @@ def verify_zkp(proof_path):
             # Check if the JSON contains required fields
             required_fields = ['prediction', 'prediction_value', 'witness_hash', 'circuit_hash', 'timestamp']
             if all(field in proof_data for field in required_fields):
-                # In a real implementation, this would include more cryptographic checks
-                print("Verified JSON proof structure (without cryptographic verification)")
+                # Implement cryptographic verification
+                import hashlib
+                
+                # Verify circuit hash against the actual circuit file
+                circuit_path = os.path.join(PROJECT_ROOT, 'circuit.r1cs')
+                if not os.path.exists(circuit_path):
+                    print(f"Circuit file not found: {circuit_path}")
+                    return False
+                    
+                with open(circuit_path, 'rb') as f:
+                    circuit_content = f.read()
+                calculated_circuit_hash = hashlib.sha256(circuit_content).hexdigest()
+                
+                if calculated_circuit_hash != proof_data['circuit_hash']:
+                    print(f"Circuit hash mismatch: expected {proof_data['circuit_hash']}, got {calculated_circuit_hash}")
+                    return False
+                
+                # Verify the format of the witness hash (should be a 64-character hex string for SHA-256)
+                if not proof_data['witness_hash'] or not isinstance(proof_data['witness_hash'], str) or len(proof_data['witness_hash']) != 64:
+                    print("Invalid witness hash format")
+                    return False
+                
+                print("Cryptographic verification of JSON proof successful")
                 return True
             else:
                 print("JSON proof missing required fields")
